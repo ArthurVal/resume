@@ -1,0 +1,469 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+% * esben
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+	% logowidth=4.5cm,
+	% logospace=5mm,
+	% logoposition=before,
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+%	\usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+
+\usepackage{enumitem}
+\newcommand{\cea}{\href{http://www.cea.fr/}{CEA}}
+\newcommand{\ros}{\href{http://www.ros.org/}{R.O.S.}}
+\newcommand{\ice}{\href{https://zeroc.com/products/ice}{ICE}}
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{Arthur Valiente}
+% job title/career
+\cvjobtitle{Ingénieur Logiciel Embarqué,\\[0.2em] Ingénieur Robotique}
+
+%% optional information
+% profile picture
+% \cvprofilepic{pics/profile.png}
+% logo picture
+% \cvlogopic{pics/logo_txt.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+% \cvbirthday{\today}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{50 rue Pierre Sémard,\newline 38000 Grenoble}
+% phone number
+\cvphone{+33.6.77.20.10.54}
+% personal website
+% \cvsite{https://pandascience.net}
+% email address
+\cvmail{valiente.arthur@gmail.com}
+% pgp key
+% \cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+% \cvcustomdata{\faGithub}{https://github.com/ArthurVal}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{FortySecondsCV/pics/flags/shiny/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Réseaux sociaux}
+		\begin{icontable}{2.5em}{1em}
+			\social{\faLinkedin}
+        {https://www.linkedin.com/in/arthur-valiente-1866937b/}
+				{/arthur-valiente-1866937b}
+			\social{\faGithub}
+				{https://github.com/ArthurVal}
+				{/ArthurVal}
+		\end{icontable}
+
+	\profilesection{Langues}
+		\pointskill{\flag{FR.png}}{Français}{5}
+		\pointskill{\flag{GB.png}}{Anglais}{4}
+  	\pointskill{\flag{ES.png}}{Espagnol}{1}
+	  \pointskill{\flag{JP.png}}{Japonais}{1}
+
+  \profilesection{Compétences}
+    \chartlabel{Aperçu}
+  	\begin{figure}\centering
+  		\smartdiagram[bubble diagram]{
+  			\textcolor{white}{\large \textbf{Ingénieur}} \\
+  			\textcolor{white}{\large \textbf{Logiciel}}\\ % center bubble
+  			\textcolor{white}{\large \textbf{Robotique}}, % center bubble
+  			\textcolor{black!90}{\large \ros, \ice}\\
+  			\textcolor{black!90}{\large middleware}\\
+  			\textcolor{black!90}{(TCP - UDP)},
+  			\textcolor{black!90}{\large \faLinux}\\
+  			\textcolor{black!90}{\large Linux}\\        
+        \textcolor{black!90}{\large
+          \href{https://www.yoctoproject.org/}{Yocto}},
+  			\textcolor{black!90}{\large C/C++}\\
+  			\textcolor{black!90}{\large Python}\\
+  			\textcolor{black!90}{\large Bash},
+        \textcolor{black!90}{\large UML -
+          \href{https://fr.wikipedia.org/wiki/Programmation_orientée_objet}{OOP}}\\
+        \textcolor{black!90}{Design Pattern},
+        \textcolor{black!90}{\large SOC}\\
+        \textcolor{black!90}{ARM - DSP} }
+  	\end{figure}
+    
+    \chartlabel{Software}\\
+  	\begin{figure}\centering    
+      \barskill{}{\large C++ $\textbullet$ Python $\textbullet$ git $\textbullet$ \ros}{90}
+      \barskill{}{\large Bash $\textbullet$ CMake $\textbullet$ Emacs}{80}
+      \barskill{}{\large Matlab $\textbullet$ Simulink $\textbullet$ Make}{40}
+      \barskill{}{\large \LaTeX }{20}
+  	\end{figure}
+}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+
+}
+
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Formation}
+\begin{cvtable}[1.5]
+	\cvitem{2012 -- 2015}{Ingénieur : Génie Électrique et Automatique}{\href{http://www.enseeiht.fr/fr/index.html}{INP-ENSEEIHT}}
+  {Commande, Décision et Informatique des Systèmes Critiques\newline
+   Développement des Systèmes Informatiques Critiques}
+	\cvitem{2010 -- 2012}{D.U.T. Mesures Physiques}{\href{http://iut-meph.ups-tlse.fr/}{I.U.T Paul Sabatier, Toulouse}}
+  {Techniques Instrumentales}
+	\cvitem{2010}{Baccalauréat S - Science de l'Ingénieur}{\href{http://alexis-monteil.entmip.fr/}{Lycée Alexis Monteil, Rodez}}
+  { }  
+\end{cvtable}
+
+\cvsection{Expériences professionnelles}
+  
+
+\begin{cvtable}[2]
+  \cvitem{Janv 2021}{CDI : Ingénieur informatique}
+  {Capgemini-DEMS, Toulouse}
+  {
+    \textbf{Projet de Recherche et Innovation} : Product Owner du Work Package
+    navigation autonome d'un bateau
+  }
+  \cvitem{Mars 2020 -- Juin 2020}{CDD : Ingénieur informatique}
+  {\href{https://www.polytechnique.edu/fr/le-laboratoire-leprince-ringuet-llr}{École Polytechnique, Palaiseau}}
+  {
+    \textbf{\href{http://polywww.in2p3.fr/-cms-45-?lang=fr}{Projet CMS}}:
+    \textbf{Rédaction de la spécification} du robot en charge du test
+    automatique des détecteurs HGCROC.
+  }
+  
+  \cvitem{Juil 2018 -- Déce 2019}
+  {CDD : Ingénieur de Recherche}
+  {\cea-DRF-IRFU, Saclay}
+  {
+    \textbf{Responsable du banc de test distribué} du logiciel embarqué de la
+    caméra ECLAIRs (Détection de sursauts gamma):\newline
+    $\textbullet$ \href{http://www.svom.fr/}{Projet SVOM} -- Collaboration \cea\
+    - \href{http://www.irap.omp.eu/}{IRAP} - \href{https://cnes.fr/fr}{CNES} - CNSA\newline
+    $\textbullet$ Développement de l'infrastructure de test distribuée (2x Zedboard, PC,
+    plateforme embarqué ECLAIRs) (\textbf{C++}, \textbf{Python})\newline
+    $\textbullet$ Création/rédaction des scripts de tests unitaires
+    (\textbf{Python})\newline
+    $\textbullet$ \textbf{PUS} - \textbf{Spacewire} - Middleware
+    \href{https://zeroc.com/products/ice}{\textbf{ICE}}
+  }
+  
+  \cvitem{Janv 2017 -- Déce 2017}
+  {CDD : Ingénieur de Recherche}
+  {\cea-DRT-LIST, Saclay}
+  {
+    \textbf{Responsable logiciel pour applications robotiques}:\newline
+    $\textbullet$ Co-responsable développement logiciel (Git Admin - \ros)\newline
+    $\textbullet$ SLAM hybride topologique pour robot mobile (Lidar / IMU / Caméra RBG-D
+    / ...) (\textbf{C++})\newline
+    $\textbullet$ \textbf{\href{https://www.designspot.fr/portfolio/face/}{Projet
+        FACE}}: En charge de la création du prototype de démonstration multi
+    \href{https://en.wikipedia.org/wiki/System_on_a_chip}{System-On-Chip}
+    distribué (Renesas R-Car H3, Nvidia Tx2, Kalray MPPA Bostan) pour la voiture
+    autonome\newline 
+    $\textbullet$ Développement de 'layers' Linux embarqué Yocto pour R-Car H3
+  }
+  
+	\cvitem{Sept 2015 -- Déce 2015}
+  {CDD : Ingénieur d'Étude}
+  {\href{https://www.irit.fr/?lang=fr}{UPS-IRIT, Toulouse}}
+  {
+    \textbf{Développement démonstration robotique} sur robots
+    \href{http://www.willowgarage.com/pages/pr2/overview}{PR2} et
+    \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}:\newline
+    $\textbullet$ Projet
+    \href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
+      RIDDLE} -- Collaboration CNRS-LAAS, UPS-IRIT, Aldebaran Robotics, CHU
+    Toulouse, Magelium\newline
+    $\textbullet$ Importation d'algorithmes de détection d'objets et d'intéractions (vision
+    et vocal) sur robot \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
+    d'Aldebaran Robotics
+  }
+
+	\cvitem{Mars 2015 -- Sept 2015}
+  {Stage : Projet de Fin d'Étude - Ingénieur}
+  {\href{https://www.laas.fr/public/fr}{CNRS-LAAS, Toulouse}}
+  {
+    \textbf{Fusion traitement d'image/détecteur radiofréquence pour la
+      détection/localisation d'objects}:\newline
+    $\textbullet$ Projet
+    \href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
+      RIDDLE} -- Collaboration CNRS-LAAS, UPS-IRIT, Aldebaran Robotics, CHU
+    Toulouse, Magelium\newline
+    $\textbullet$ Développement sur \ros\ de briques de détection d'objets via
+    traitement d'image
+    (\href{http://www.stefan-hinterstoisser.com/papers/hinterstoisser2011linemod.pdf}{LINEMOD} 
+    \& \href{http://wiki.ros.org/tabletop_object_detector}{TABLETOP}) (\textbf{C++})
+  }
+
+	\cvitem{Fevr 2015 -- Mars 2015}
+  {Projet Étudiant Ingénieur}
+  {\href{https://www.laas.fr/public/fr}{CNRS-LAAS, Toulouse}}
+  {
+    \textbf{Algorithme probabilistique de localisation binaurale}:\newline
+    $\textbullet$ Projet \href{http://twoears.eu/}{TWO!EARS}\newline
+    $\textbullet$ Filtre de Kalman Unscented Multi-Hypothèses (MH-UKF)
+    (\textbf{C++})
+  }
+
+	\cvitem{Juil 2014 -- Août 2014}
+  {Stage: Technicien}
+  {\href{http://www.spherea.com/fr}{Cassidian Test \& Services, Colomiers}}
+  {
+    Stage technicien création liaison PCIe sur FPGA Spartan 6 (VHDL)
+  }
+
+	\cvitem{Juil 2013 -- Août 2013}
+  {Stage: Ouvrier}
+  {Tokyo / Kitakyushu, Japon}
+  {
+    Ouvrier peintre en bâtiment
+  }
+
+	\cvitem{Avri 2012 -- Juin 2012}
+  {Stage: Technicien}
+  {\href{https://www.gtptech.com/}{GTP Technology}, Labège}
+  {
+    Instrumentation, acquisition de données (Modbus, UART, RS-485)    
+  }
+\end{cvtable}
+
+% \newpage
+% \makebacksidebar
+
+% \newgeometry{
+% 	top=\topbottommargin,
+% 	bottom=\topbottommargin,
+% 	right=\leftrightmargin,
+% 	left=\leftrightmargin
+% }
+
+\cvsignature
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commented here in order to save tham as example
+
+%%% - Side Bar
+
+% \profilesection{About Me}
+% \aboutme{
+% The giant panda is a terrestrial animal and primarily spends its life
+% roaming and feeding in the bamboo forests of the Qinling Mountains and in
+% the hilly province of Sichuan.
+% }
+
+%  \profilesection{Diagrams}
+% \begin{sidebarminipage}
+%  \chartlabel{Bubble}
+% 	\chartlabel{Diagrams}
+% 	\chartlabel{with}
+% 	\chartlabel{proper}
+% 	\chartlabel{overflow}
+% 	\chartlabel{protection}
+% 	\chartlabel{for}
+% 	\chartlabel{labels}
+% \end{sidebarminipage}
+
+% \begin{figure}\centering
+%  \smartdiagram[bubble diagram]{
+% \textcolor{white}{\textbf{Being a}} \\
+% \textcolor{white}{\textbf{Panda}}, % center bubble
+% \textcolor{black!90}{Eating},
+% \textcolor{black!90}{Sleeping},
+% \textcolor{black!90}{Rolling},
+% \textcolor{black!90}{Playing},
+% \textcolor{black!90}{Chilling}
+% }
+% \end{figure}
+
+% \chartlabel{Wheel Chart}
+
+% \wheelchart{3.7em}{2em}{%
+% 20/3em/maincolor!50/Chill,
+% 15/3em/maincolor!15/Play,
+% 30/4em/maincolor!40/Sleep,
+% 20/3em/maincolor!20/Eat
+% }
+
+%  \profilesection{Barskills}
+% \barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+% \barskill{\faImage}{Playing Chess}{30}
+% \barskill{\faMusic}{Playing the bamboo flute}{50}
+
+% \profilesection{Memberships}
+% \begin{memberships}
+%  \membership[4em]{pics/logo.png}{PandaScience.net}
+% 	\membership[4em]{pics/logo.png}{Some longer text spanning over more than
+% only one line}
+% \end{memberships}
+
+% \profilesection{Hard Skills}
+% \skill{\faBalanceScale}{Sleeping almost all day}
+% \skill{\faSitemap}{Eating a lot of bamboo sprouts}
+% \skill{\faGraduationCap}{Relaxing rest of the day}
+
+% \profilesection{Soft Skills}
+% \pointskill{\faHome}{Looking Cute}{4}[4]
+% \skill[1.8em]{\faCompress}{No need to specify further}
+% \pointskill{\faChild}{Chillin' hard}{3}[4]
+% \skill[1.8em]{\faCompress}{On a tree}
+% \skill[1.8em]{\faCompress}{In the grass}
+
+%%% - Body
+
+% \cvsection{section}
+% \cvsubsection{Subsection}
+% \begin{cvtable}
+% 	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+% \end{cvtable}
+
+% \cvsection{cvitem}
+% \cvsubsection{Multi-line with longer description}
+% \begin{cvtable}
+% 	\cvitem{date}{Description}{location}{Some longer and more detailed
+% 		description, that takes two lines of space instead of only one.}
+% 	\cvitem{date}{Description}{location}{Some longer and more detailed
+% 		description, that takes two lines of space instead of only one.}
+% 	\cvitem{date}{Description}{location}{Some longer and more detailed
+% 		description, that takes two lines of space instead of only one.}
+% \end{cvtable}
+
+% \cvsubsection{One-line without description}
+% \begin{cvtable}
+% 	\cvitem{Award}{One-line description}{Sponsor}{}
+% 	\cvitem{Award}{One-line description}{Sponsor}{}
+% 	\cvitem{Award}{One-line description}{Sponsor}{}
+% \end{cvtable}
+
+% \cvsection{cvitemshort}
+% \cvsubsection{One-line}
+% \begin{cvtable}
+% 	\cvitemshort{Key}{Some further description}
+% 	\cvitemshort{Key}{Some further description}
+% 	\cvitemshort{Key}{Some further description}
+% \end{cvtable}
+
+% \cvsubsection{Multi-line with longer description}
+% \begin{cvtable}
+% 	\cvitemshort{Key}{Some further description. Can fill even more than
+% 		only one single line while still keeping the correct indendation level.}
+% 	\cvitemshort{Key}{Some further description. Can fill even more than
+% 		only one single line while still keeping the correct indendation level.}
+% 	\cvitemshort{Key}{Some further description. Can fill even more than
+% 		only one single line while still keeping the correct indendation level.}
+% \end{cvtable}
+
+% \cvsection{cvpubitem}
+% \begin{cvtable}
+% 	\cvpubitem{Publication title}{Authors}{Journal}{Year}
+% 	\cvpubitem{Publication title}{Authors}{Journal}{Year}
+% 	\cvpubitem{Publication title that is spanning over multiple lines and still
+% 		does not look too bad}{Authors}{Journal}{Year}
+% \end{cvtable}
+
+
+
+
+
+% Local Variables:
+% TeX-engine: xetex
+% End:

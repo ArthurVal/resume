@@ -7,3 +7,6 @@
 [submodule "plugins/menu"]
 	path = plugins/menu
 	url = https://github.com/denehyg/reveal.js-menu.git
+[submodule "CV/FortySecondsCV"]
+	path = CV/FortySecondsCV
+	url = https://github.com/PandaScience/FortySecondsCV.git
