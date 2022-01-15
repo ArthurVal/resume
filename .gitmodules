@@ -1,10 +1,10 @@
-[submodule "reveal.js"]
+[submodule "docs/reveal.js"]
 	path = docs/reveal.js
 	url = https://github.com/hakimel/reveal.js
-[submodule "plugins/collection"]
+[submodule "docs/plugins/collection"]
 	path = docs/plugins/collection
 	url = https://github.com/rajgoel/reveal.js-plugins.git
-[submodule "plugins/menu"]
+[submodule "docs/plugins/menu"]
 	path = docs/plugins/menu
 	url = https://github.com/denehyg/reveal.js-menu.git
 [submodule "CV/FortySecondsCV"]
