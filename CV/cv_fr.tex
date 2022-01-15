@@ -59,12 +59,14 @@
 \ifxetexorluatex
 	\usepackage{fontspec}
 	\defaultfontfeatures{Ligatures=TeX}
-%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
 \else
 	\usepackage[utf8]{inputenc}
 	\usepackage[T1]{fontenc}
-%	\usepackage[sfdefault]{noto} % use noto google font
 \fi
+
+% \usepackage[sfdefault]{noto} % use noto google font
+\usepackage[sfdefault]{ClearSans}
 
 % enable mathematical syntax for some symbols like \varnothing
 \usepackage{amssymb}
