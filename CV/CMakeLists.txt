@@ -28,10 +28,17 @@ cmake_print_variables(LATEX_COMPILER)
 cmake_print_variables(PDFLATEX_COMPILER)
 
 add_custom_command(
-    OUTPUT ${PROJECT_NAME}.pdf
-    COMMAND TEXINPUTS=${CMAKE_CURRENT_SOURCE_DIR}:${CMAKE_CURRENT_SOURCE_DIR}/FortySecondsCV//: ${PDFLATEX_COMPILER} -output-directory ${CMAKE_CURRENT_BINARY_DIR} -jobname ${PROJECT_NAME} -interaction=nonstopmode ${CMAKE_CURRENT_SOURCE_DIR}/cv_fr.tex
+    OUTPUT ${PROJECT_NAME}_FR.pdf
+    COMMAND TEXINPUTS=${CMAKE_CURRENT_SOURCE_DIR}:${CMAKE_CURRENT_SOURCE_DIR}/FortySecondsCV//: ${PDFLATEX_COMPILER} -output-directory ${CMAKE_CURRENT_BINARY_DIR} -jobname ${PROJECT_NAME}_FR -interaction=nonstopmode ${CMAKE_CURRENT_SOURCE_DIR}/cv_fr.tex
     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/cv_fr.tex
     VERBATIM)
 
-add_custom_target(cv_pdf ALL
-    DEPENDS ${PROJECT_NAME}.pdf)
+add_custom_command(
+    OUTPUT ${PROJECT_NAME}_EN.pdf
+    COMMAND TEXINPUTS=${CMAKE_CURRENT_SOURCE_DIR}:${CMAKE_CURRENT_SOURCE_DIR}/FortySecondsCV//: ${PDFLATEX_COMPILER} -output-directory ${CMAKE_CURRENT_BINARY_DIR} -jobname ${PROJECT_NAME}_EN -interaction=nonstopmode ${CMAKE_CURRENT_SOURCE_DIR}/cv_en.tex
+    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/cv_en.tex
+    VERBATIM)
+
+
+add_custom_target(cv_fr_pdf ALL DEPENDS ${PROJECT_NAME}_FR.pdf)
+add_custom_target(cv_en_pdf ALL DEPENDS ${PROJECT_NAME}_EN.pdf)
