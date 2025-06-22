@@ -108,7 +108,7 @@
 % your name
 \cvname{Arthur VALIENTE}
 % job title/career
-\cvjobtitle{Expert C/C++/Python\\[0.2em] Contrôle \& Robotique}
+\cvjobtitle{Expert C/C++/Python\\[0.2em] Instrumentation \& Contrôle}
 
 %% optional information
 % profile picture
@@ -161,7 +161,7 @@
 	\profilesection{Langues}
 		\pointskill{\flag{FR.png}}{Français}{4}[4]
 		\pointskill{\flag{GB.png}}{Anglais \scriptsize{(TOEIC 935/990)}}{3}[4]
-    \pointskill{\flag{ES.png} \flag{JP.png}} {Espagnol/Japonais}{1}[4]
+    %% \pointskill{\flag{ES.png} \flag{JP.png}} {Espagnol/Japonais}{1}[4]
         % \pointskill{\flag{}}{Japonais}{1}
 
   \profilesection{Compétences}
@@ -169,7 +169,7 @@
     \smartdiagram[bubble diagram]{
       \textcolor{white}{\large \textbf{Ingénieur}} \\
       \textcolor{white}{\large \textbf{Logiciel}}\\ % center bubble
-      \textcolor{white}{\large \textbf{Robotique}}, % center bubble
+      \textcolor{white}{\large \textbf{Embarqué}}, % center bubble
       % --
       \textcolor{black!90}{\large Systèmes}\\
       \textcolor{black!90}{\large Distribués}\\
@@ -274,103 +274,155 @@
 % \cvsubsection{\textbf{Emploi}}
 \begin{cvtable}[2]
   \cvitem
-      {Depuis\newline10/2022}
-      {CDI : Ingénieur Dév. Logiciel Embarqué}
+      {Depuis 05/2025}
+      {Ingénieur Dév. Logiciel Embarqué}
+      {\href{https://www.erems.fr/fr/}{EREMS, Flourens}}
+  {
+    Développeur logiciel embarqué
+    %% : \newline $\bullet$ {
+    %%   Création de tests unitaires LFC .. TODO
+    %% }
+  }
+  \cvitem
+      {De 11/2024 \newline À 05/2025}
+      {Ingénieur de Recherche}
+      {\href{https://www.laas.fr/public/fr}{CNRS-LAAS, Toulouse}}
+  {
+    Développeur logiciel au sein de l'équipe de recherche GEPETTO
+    %% : \newline $\bullet$ {
+    %%   Création de tests unitaires LFC .. TODO
+    %% }
+  }
+
+  \cvitem
+      {De 10/2022 \newline À 09/2024}
+      {Ingénieur Dév. Logiciel Embarqué}
       {\href{https://fr.wikipedia.org/wiki/Airbus_Defence_and_Space}{Airbus DS, Toulouse}}
   {
-    Développeur Logiciel Embarqué au sein de l'équipe R\&D TESOD:\newline
-    $\bullet$ Débug/Investigation sur SoC
-    \href{https://nanoxplore.org/index.php/product/ng-ultra/}{NG-Ultra} (\textbf{2x ARM
-    R52 + FPGA})\newline
-    $\bullet$ Spec/Développement SoC
-    \href{https://www.xilinx.com/products/silicon-devices/acap/versal-ai-core.html}{Xilinx
-      Versal} (\textbf{C et C++})
+    Développeur \hl{logiciel embarqué spatial (R\&D)}:
+    \newline $\bullet$ {
+      Débug/Investigation sur SoC
+      \href{https://nanoxplore.org/index.php/product/ng-ultra/}{NG-Ultra}
+      (\textbf{2x ARM R52 + FPGA})
+    }
+    \newline $\bullet$ {
+      Spec/Développement SoC
+      \hl{
+        \href{https://www.xilinx.com/products/silicon-devices/acap/versal-ai-core.html}
+             {Xilinx Versal}
+      } (\textbf{D-BUS, C et C++})
+    }
   }
 
-  \cvitem{De 06/2021\\À 10/2022}{CDI : Ingénieur Logiciel Contrôle Accélérateur}
-  {\href{https://www.esrf.fr/}{ESRF, Grenoble}}
+  \cvitem
+      {De 06/2021\\À 10/2022}
+      {Ingénieur Logiciel Contrôle Accélérateur}
+      {\href{https://www.esrf.fr/}{ESRF, Grenoble}}
   {
     Responsable de la \hl{maintenance et de l'évolution} des logiciels en charge
-    du contrôle de l'accélérateur de particule:\newline
-    $\bullet$ Contact principal avec le groupe \hl{'Power Supplies'}\newline
-    $\bullet$ Logiciel d'intéraction avec le \hl{système redondant} d'alimentations
-    électriques (aimants principaux - anneau de stockage)\newline
-    $\bullet$ Développement de fonctionnalités pour le contrôle d'orbite\newline
-    $\bullet$ \hl{Système de contrôle distribué} ($\approx$ 23000 processus)
-    (\hl{\textbf{\tango}})
+    du contrôle de l'accélérateur de particule:
+    \newline $\bullet$ {
+      Contact principal avec le groupe \hl{'Power Supplies'}
+    }
+    \newline $\bullet$ {
+      Système redondant d'alimentations électriques
+    }
+    \newline $\bullet$ {
+      Développement de fonctionnalités pour le contrôle d'orbite
+    }
+    \newline $\bullet$ {
+      \hl{Système de contrôle distribué} ($\approx$ 23000 processus)
+      (\textbf{\tango})
+    }
   }
 
-  \cvitem{De 01/2021\\À 05/2021}{CDI : Ingénieur informatique}
-  {\href{https://www.capgemini.com/service/digital-services/digital-engineering-and-manufacturing-services/}{Capgemini-DEMS,
+  \cvitem
+      {De 01/2021\\À 05/2021}
+      {Ingénieur informatique}
+      {\href{https://www.capgemini.com/service/digital-services/digital-engineering-and-manufacturing-services/}{Capgemini-DEMS,
       Toulouse}}
   {
-    \textbf{Projet de Recherche et Innovation} : \hl{Product Owner} du Work
-    Package \hl{'Navigation autonome'} du
+    \hl{Product Owner} du Work Package \hl{'Navigation autonome'} du
     \href{https://www.capgemini.com/fr-fr/solutions/5g-water-clean-bot/}{5G
       Water Clean Bot} (\textbf{SCRUM})
   }
 
-  \cvitem{De 03/2020\\À 06/2020}{CDD : Ingénieur informatique}
-  {\href{https://www.polytechnique.edu/fr/le-laboratoire-leprince-ringuet-llr}{École
+  \cvitem
+      {De 03/2020\\À 06/2020}
+      {Ingénieur informatique}
+      {\href{https://www.polytechnique.edu/fr/le-laboratoire-leprince-ringuet-llr}{École
       Polytechnique, Palaiseau}}
   {
-    \hl{\textbf{\href{http://polywww.in2p3.fr/-cms-45-?lang=fr}{Projet CMS}}}:
-    Spécification fonctionnelle du robot pour test automatique de détecteurs
-    HGCROC. (\textbf{UML})
+    \textbf{\href{http://polywww.in2p3.fr/-cms-45-?lang=fr}{Projet CMS}}:
+    Spécification fonctionnelle logiciel de contrôle (\textbf{UML})
   }
 
-  \cvitem{De 07/2018\\À 12/2019}
-  {CDD : Ingénieur de Recherche}
-  {\cea-DRF-IRFU, Saclay}
+  \cvitem
+      {De 07/2018\\À 12/2019}
+      {Ingénieur de Recherche}
+      {\cea-DRF-IRFU, Saclay}
   {
     Responsable du \hl{banc de test distribué} du \hl{logiciel embarqué spatial} de la
-    caméra ECLAIRs (Détection de sursauts gamma):\newline
-    $\bullet$ \hl{\href{http://www.svom.fr/}{Projet SVOM}} -- Collaboration
-    \cea\ - \href{http://www.irap.omp.eu/}{IRAP} -
-    \href{https://cnes.fr/fr}{CNES} - CNSA\newline
-    $\bullet$ Développement de l'\hl{infrastructure de test distribuée} (2xZedboard, PC, plateforme embarqué ECLAIRs) (\textbf{C++},
-    \textbf{Python})\newline
-    $\bullet$ Création/rédaction des scripts de tests unitaires
-    (\href{https://en.wikipedia.org/wiki/Software_requirements_specification}{SRS}
-    \href{https://en.wikipedia.org/wiki/Software_verification_and_validation}{V\&V},
-    \textbf{Python})\newline
-    $\bullet$ CCSDS PUS - Spacewire - Middleware
-    \href{https://zeroc.com/products/ice}{\textbf{ICE}} -
-    \href{https://www.plm.automation.siemens.com/global/en/products/polarion/}{Polarion}
+    caméra ECLAIRs (Détection de sursauts gamma):
+    \newline $\bullet$ {
+      \hl{\href{http://www.svom.fr/}{Projet SVOM}} -- Collaboration
+      \cea\ - \href{http://www.irap.omp.eu/}{IRAP} -
+      \href{https://cnes.fr/fr}{CNES} - CNSA
+    }
+    \newline $\bullet$ {
+      Développement de l'\hl{infrastructure de test distribuée} (2xZedboard, PC,
+      plateforme embarqué ECLAIRs) (\textbf{C++}, \textbf{Python})
+    }
+    \newline $\bullet$ {
+      Création des scripts de tests unitaires
+      (\href{https://en.wikipedia.org/wiki/Software_requirements_specification}{SRS}
+      \href{https://en.wikipedia.org/wiki/Software_verification_and_validation}{V\&V},
+      \textbf{Python})
+    }
+    \newline $\bullet$ {
+      CCSDS PUS - Spacewire - Middleware
+      \href{https://zeroc.com/products/ice}{\textbf{ICE}} -
+      \href{https://www.plm.automation.siemens.com/global/en/products/polarion/}{Polarion}
+    }
   }
 
-  \cvitem{De 01/2017\\À 12/2017}
-  {CDD : Ingénieur de Recherche}
-  {\cea-DRT-LIST, Saclay}
+  \cvitem
+      {De 01/2017\\À 12/2017}
+      {Ingénieur de Recherche}
+      {\cea-DRT-LIST, Saclay}
   {
-    Responsable logiciel pour applications robotiques:\newline
-    $\bullet$
-    \hl{\href{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping}{SLAM}}
-    hybride topologique pour robot mobile (Lidar / IMU / Caméra RBG-D / ...)
-    (\textbf{C++})\newline
-    $\bullet$ \textbf{\href{https://www.designspot.fr/portfolio/face/}{Projet
-        FACE}}: En charge de la création du prototype de \hl{démonstration multi
-    \href{https://en.wikipedia.org/wiki/System_on_a_chip}{System-On-Chip}
-    distribué} (Renesas R-Car H3, Nvidia Tx2, Kalray MPPA Bostan) pour le
-    véhicule autonome\newline
-    $\bullet$ Développement de 'layers' \hl{Linux embarqué Yocto} pour R-Car H3
+    Responsable logiciel pour applications robotiques:
+    %% \newline $\bullet$ {
+    %%   \hl{\href{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping}{SLAM}}
+    %%   hybride topologique pour robot mobile (Lidar / IMU / Caméra RBG-D / ...)
+    %%   (\textbf{C++})
+    %% }
+    \newline $\bullet$ {
+      \textbf{\href{https://www.designspot.fr/portfolio/face/}{Projet FACE}}: En
+      charge de la création du prototype de \hl{démonstration multi
+        \href{https://en.wikipedia.org/wiki/System_on_a_chip}{System-On-Chip}
+        distribué} (Renesas R-Car H3, Nvidia Tx2, Kalray MPPA Bostan) pour
+      le véhicule autonome
+    }
+    \newline $\bullet$ {
+      Développement de 'layers' \hl{Linux embarqué Yocto} pour R-Car H3
+    }
   }
 
-	\cvitem{De 07/2015\\À 12/2015}
-  {CDD : Ingénieur d'Étude}
-  {\href{https://www.irit.fr/?lang=fr}{UPS-IRIT, Toulouse}}
+	\cvitem
+      {De 07/2015\\À 12/2015}
+      {Ingénieur d'Étude}
+      {\href{https://www.irit.fr/?lang=fr}{UPS-IRIT, Toulouse}}
   {
     Développement démonstration robotique sur robots
     \href{http://www.willowgarage.com/pages/pr2/overview}{PR2} et
-      \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}:\newline
-    $\bullet$ Algorithme de détection d'objets et intéractions Homme-Robot\newline
-    $\bullet$ Projet
-    \href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
-      RIDDLE}
+      \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
+    %% \newline$\bullet$ Algorithme de détection d'objets et intéractions Homme-Robot
+    %% \newline$\bullet$ Projet \href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR RIDDLE}
   }
 \end{cvtable}
 
-\cvsubsection{\textbf{Stages | Projets étudiants}}
+\cvsubsection{\textbf{Stages | Projets}}
 \begin{cvtable}[2]
   \cvitem{6 mois 2015}
   {
